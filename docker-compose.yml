@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  oem-e2e-poc:
-    image: oem-e2e-poc
-    container_name: oem-e2e-poc
+  oem-e2e-poc-public:
+    image: oem-e2e-poc-public
+    container_name: oem-e2e-poc-public
     build:
       context: .
       dockerfile: Dockerfile

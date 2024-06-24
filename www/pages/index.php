@@ -98,7 +98,7 @@
             $ticketID = $_SESSION['ticketId'];
             $astratoUrl = $_ENV['ASTRATO_URL'];
             $_SESSION['ticketId'] = null;
-            echo "<script>fetch('" + $astratoUrl +"auth/proxy/oem/ticket/$ticketID?embed', {credentials: 'include'}).then(r => r.json()).then(console.log)</script>";
+            echo "<script>fetch('" . $astratoUrl . "auth/proxy/oem/ticket/$ticketID?embed', {credentials: 'include'}).then(r => r.json()).then(console.log)</script>";
         }
     ?>
 </body>
