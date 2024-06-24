@@ -1,6 +1,6 @@
 #QUICK START
 
-1. To start the app, set the required variables in the .env.example file. The following document https://app.clickup.com/9015092768/docs/8cneth0-815/8cneth0-1355 contains information on how to obtain the ID and secret.
+1. To start the app, set the required variables in the .env.example file. The following document https://help.astrato.io/en/articles/9413603-auth-oem-api contains information on how to obtain the ID and secret.
 ```
   ASTRATO_CLIENT_ID=
   ASTRATO_CLIENT_SECRET=
