@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  oem-e2e-poc:
+    image: oem-e2e-poc
+    container_name: oem-e2e-poc
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - ./www:/var/www/html
+    env_file:
+      - .env.example
