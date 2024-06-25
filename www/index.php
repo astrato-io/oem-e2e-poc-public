@@ -23,10 +23,10 @@ SimpleRouter::get('/', function () {
 SimpleRouter::post('/login', function () {
         // Validate credentials (replace with your authentication logic)
         $email = $_POST['email'] ?? '';
-        $password = $_POST['password'] ?? '';
+        
  
         // Replace with your authentication logic (e.g., check against a database)
-        if ($email && $password) {
+        if ($email ) {
             // Authentication successful, create a session
             $_SESSION['user'] = $email;
 
@@ -38,7 +38,7 @@ SimpleRouter::post('/login', function () {
             exit();
         } else {
             // Authentication failed, show an error (you might want to implement this part)
-            echo "Invalid email or password". $email." ". $password;
+            echo "Invalid email". $email." ";
         }
  });
 
@@ -48,10 +48,10 @@ SimpleRouter::match(['get', 'post'],'/login', function () {
      
         // Validate credentials (replace with your authentication logic)
         $email = $_POST['email'] ?? '';
-        $password = $_POST['password'] ?? '';
+        
  
         // Replace with your authentication logic (e.g., check against a database)
-        if ($email && $password ) {
+        if ($email) {
             // Authentication successful, create a session
             $_SESSION['user'] = $email;
             $managementToken = getManagementApiToken();
@@ -60,7 +60,7 @@ SimpleRouter::match(['get', 'post'],'/login', function () {
             exit();
         } else {
             // Authentication failed, show an error (you might want to implement this part)
-            echo "Invalid email or password". $email." ". $password;
+            echo "Invalid email". $email." ";
         }
     }
      echo file_get_contents('./pages/login.html');

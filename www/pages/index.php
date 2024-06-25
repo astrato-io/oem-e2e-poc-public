@@ -17,10 +17,11 @@
         }
 
         header {
+            display: flex;
+            flex-direction: row;
             background-color: #333;
             color: #fff;
             padding: 10px;
-            text-align: center;
         }
 
         header button {
@@ -28,8 +29,8 @@
             color: #fff;
             padding: 8px 16px;
             border: none;
-            border-radius: 4px;
             cursor: pointer;
+            margin: 5px
         }
 
         header button:hover {
@@ -45,8 +46,8 @@
 
         iframe {
             border: none;
-            width: 80%;
-            height: 60vh;
+            width: 100%;
+            height: 80vh;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
@@ -56,12 +57,16 @@
             padding: 10px;
             text-align: center;
         }
+
+        p.flex-grow-1 {
+            flex-grow: 1;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <p><?= "Hello ". $_SESSION['user'] ?></p>
+        <p class="flex-grow-1"><?= "Hello ". $_SESSION['user'] ?></p>
         <button onclick="logout()">Logout</button>
     </header>
 
@@ -71,7 +76,7 @@
     </main>
 
     <footer>
-        <p>Some generic footer content.</p>
+        <p>Featured by Astrato Analytics</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/rxjs@7.8.1/dist/bundles/rxjs.umd.min.js"></script>
